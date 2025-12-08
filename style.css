@@ -1,0 +1,29 @@
+
+body {
+    background-color: rgb(244,237,255) !important;
+}
+
+.container {
+    min-height: 100vh;
+    background-color: rgb(244,237,255) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.question-footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+}
+
+.quiz-card {
+    width: 25rem;
+}
+
+.quiz-answer-card:hover {
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.05);
+}
