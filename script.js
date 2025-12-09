@@ -86,8 +86,10 @@ function answer(selection) {
     
     if(selectedQuestionNumber == question['right_answer']) {
         console.log('Your answer is right!');
+        document.getElementById(selection).parentNode.classList.add('bg-success');
     } else {
         console.log('Wrong answer! Try again!');
+        document.getElementById(selection).parentNode.classList.add('bg-danger');
         
     }
 
