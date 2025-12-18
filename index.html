@@ -31,7 +31,12 @@
     <div class="container">
         <div class="card quiz-card">
             <img src="./assets/Quizapp Blue/education.jpg" class="card-img-top">
-            <div class="card-body">
+
+            <div class="card-body" id="endScreen" style="display: none;">
+                Quiz beendet!
+            </div>
+
+            <div class="card-body" id="questionBody">
                 <h5 class="card-title" id="questionText">Frage</h5>
                 <div class="card quiz-answer-card  mb-2" onclick="answer('answer_1')">
                     <div class="card-body" id="answer_1">
@@ -56,9 +61,9 @@
 
                 <div class="question-footer">
                     <span>
-                        <b>1</b> von <b id="allQuestions">5</b> Fragen
+                        <b id="actualQuestion">1</b> von <b id="allQuestions">5</b> Fragen
                     </span>
-                    <button class="btn btn-primary" id="nextButton" disabled>Nächste Frage</button>
+                    <button onclick="nextQuestion()" class="btn btn-primary" id="nextButton" disabled>Nächste Frage</button>
                 </div>
             </div>
         </div>
