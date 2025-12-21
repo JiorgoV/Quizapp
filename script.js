@@ -118,3 +118,8 @@ function resetAnswerButtons() {
     document.getElementById('answer_4').parentNode.classList.remove('bg-danger');
     document.getElementById('answer_4').parentNode.classList.remove('bg-success');
 }
+
+function showCard() {
+    document.getElementById('main-container').classList.remove('d-none');
+    document.getElementById('welcome').classList.add('d-none');
+}

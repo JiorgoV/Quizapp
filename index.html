@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
     <script src="./script.js"></script>
     <!-- Bootstrap file -->
@@ -22,15 +23,32 @@
 
 <body onload="init()">
 
-    <nav class="navbar bg-body-tertiary">
-        <div class="container-fluid">
-            <span class="navbar-brand mb-0 h1">Quizapp</span>
-        </div>
-    </nav>
 
-    <div class="container">
+    <div class="col-md-2 bg-primary text-white sidebar" style="height: 100vh;">
+
+        <div class="text-center py-4">
+            <div class="sidebar-logo"><img src="./assets/Quizapp Blue/logo 2.png" alt="#"></div>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item bg-primary text-white" onclick="showCard()"
+                style="cursor: pointer; text-decoration: underline;"><span class="text-white">HTML</span></li>
+            <li class="list-group-item bg-primary text-white" onclick="showCard()" style="cursor: pointer;"><span
+                    class="text-white">CSS</span></li>
+            <li class="list-group-item bg-primary text-white" onclick="showCard()" style="cursor: pointer;"><span
+                    class="text-white">JS</span></li>
+            <li class="list-group-item bg-primary text-white" onclick="showCard()" style="cursor: pointer;"><span
+                    class="text-white">HTML</span></li>
+        </ul>
+    </div>
+
+
+    <div class="welcome" id="welcome">
+        Welcome to <br> The Awesome HTML Quiz
+    </div>
+
+    <div class="container d-none" id="main-container">
         <div class="card quiz-card">
-            <img src="./assets/Quizapp Blue/education.jpg" class="card-img-top">
+
 
             <div class="card-body" id="endScreen" style="display: none;">
                 Quiz beendet!
@@ -38,24 +56,28 @@
 
             <div class="card-body" id="questionBody">
                 <h5 class="card-title" id="questionText">Frage</h5>
-                <div class="card quiz-answer-card  mb-2" onclick="answer('answer_1')">
-                    <div class="card-body" id="answer_1">
-                        Antwort
+                <div class="card quiz-answer-card mb-2" onclick="answer('answer_1')">
+                    <div class="card-body d-flex align-items-center">
+                        <div class="answer-letter me-3">A</div>
+                        <div id="answer_1">Antwort</div>
                     </div>
                 </div>
                 <div class="card quiz-answer-card mb-2" onclick="answer('answer_2')">
-                    <div class="card-body" id="answer_2">
-                        Antwort
+                    <div class="card-body d-flex align-items-center">
+                        <div class="answer-letter me-3">B</div>
+                        <div id="answer_2">Antwort</div>
                     </div>
                 </div>
                 <div class="card quiz-answer-card mb-2" onclick="answer('answer_3')">
-                    <div class="card-body"id="answer_3">
-                        Antwort
+                    <div class="card-body d-flex align-items-center">
+                        <div class="answer-letter me-3">C</div>
+                        <div id="answer_3">Antwort</div>
                     </div>
                 </div>
                 <div class="card quiz-answer-card mb-2" onclick="answer('answer_4')">
-                    <div class="card-body"id="answer_4">
-                        Antwort
+                    <div class="card-body d-flex align-items-center">
+                        <div class="answer-letter me-3">D</div>
+                        <div id="answer_4">Antwort</div>
                     </div>
                 </div>
 
@@ -63,7 +85,8 @@
                     <span>
                         <b id="actualQuestion">1</b> von <b id="allQuestions">5</b> Fragen
                     </span>
-                    <button onclick="nextQuestion()" class="btn btn-primary" id="nextButton" disabled>Nächste Frage</button>
+                    <button onclick="nextQuestion()" class="btn btn-primary" id="nextButton" disabled>Nächste
+                        Frage</button>
                 </div>
             </div>
         </div>

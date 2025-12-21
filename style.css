@@ -1,6 +1,7 @@
 
 body {
     background-color: rgb(244,237,255) !important;
+    display: flex;
 }
 
 .container {
@@ -20,7 +21,12 @@ body {
 }
 
 .quiz-card {
-    width: 25rem;
+    width: 720px;
+    max-width: 90%;
+}
+
+.quiz-answer-card {
+
 }
 
 .quiz-answer-card:hover {
@@ -30,4 +36,45 @@ body {
 
 .bg-success, .bg-danger {
     color: white;
+}
+
+.end-screen {
+
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+.welcome {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+
+    background-image: url('./assets/Quizapp Blue/bg b.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.answer-letter {
+    width: 50px;
+    height: 50px;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    flex-shrink: 0;
 }
