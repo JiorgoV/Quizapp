@@ -74,7 +74,7 @@ function showQuestion() {
     // Endscreen
     if (currentQuestion >= questions.length) {
         document.getElementById('endScreen').style.display = "flex";
-        document.getElementById('questionCard').style.display = "none";
+        document.getElementById('questionBody').style.display = "none";
     } else {   // show question
         let question = questions[currentQuestion];
         document.getElementById('actualQuestion').innerHTML = currentQuestion + 1;
