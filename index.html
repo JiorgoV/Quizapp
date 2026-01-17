@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/x-icon" href="./assets/Quizapp Blue/logo 2.png">
     <link
         href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
@@ -51,10 +52,15 @@
     <div class="container d-none" id="main-container">
 
         <div class="end-body" id="endScreen" style="display: none;">
+            <img class="end-img" src="./assets/Quizapp Blue/Group 5.png" alt="">
             Quiz beendet!
+
+            <div>Your Score <b id="reachedScore">7</b><b>/7!</b></div>
+            <button type="button" class="end-buttons btn btn-warning btn-lg">SHARE</button>
+            <button onclick="replayGame()" class="end-buttons btn btn-outline-warning btn-lg">REPLAY</button>
         </div>
 
-        <div class="card quiz-card">
+        <div class="card quiz-card" id="mainCard">
 
 
             <div class="card-body" id="questionBody">
@@ -90,6 +96,9 @@
                     </span>
                     <button onclick="nextQuestion()" class="btn btn-primary" id="nextButton" disabled>Nächste
                         Frage</button>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 25%;" id="progressBar">25%</div>
                 </div>
             </div>
         </div>

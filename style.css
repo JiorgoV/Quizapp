@@ -1,12 +1,11 @@
-
 body {
-    background-color: rgb(244,237,255) !important;
+    background-color: rgb(244, 237, 255) !important;
     display: flex;
 }
 
 .container {
     min-height: 100vh;
-    background-color: rgb(244,237,255) !important;
+    background-color: rgb(244, 237, 255) !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,6 +17,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding-top: 12px;
+    margin-bottom: 8px;
 }
 
 .quiz-card {
@@ -25,22 +25,19 @@ body {
     max-width: 90%;
 }
 
-.quiz-answer-card {
-
-}
+.quiz-answer-card {}
 
 .quiz-answer-card:hover {
     cursor: pointer;
-    background-color: rgba(0,0,0,0.05);
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
-.bg-success, .bg-danger {
+.bg-success,
+.bg-danger {
     color: white;
 }
 
-.end-screen {
-
-}
+.end-screen {}
 
 .sidebar a {
     color: white;
@@ -80,11 +77,12 @@ body {
 }
 
 .end-body {
-    background-color: rgb(247,213,187);
-     width: 720px;
+    background-color: rgb(247, 213, 187);
+    width: 720px;
     height: 720px;
     border-radius: 50%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
@@ -96,4 +94,14 @@ body {
 .container {
     display: flex;
     flex-direction: column;
+}
+
+.end-buttons {
+    border: none;
+    width: 196px;
+    margin-top: 16px;
+}
+
+.end-img {
+    height: 188px;
 }

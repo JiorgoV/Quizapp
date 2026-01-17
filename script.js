@@ -75,7 +75,15 @@ function showQuestion() {
     if (currentQuestion >= questions.length) {
         document.getElementById('endScreen').style.display = "flex";
         document.getElementById('questionBody').style.display = "none";
+        document.getElementById('mainCard').style.display = "none";
+        document.getElementById('reachedScore').innerHTML = rightQuestions;
     } else {   // show question
+        let percent = currentQuestion / questions.length;
+        percent = Math.round(percent * 100);
+        document.getElementById('progressBar').innerHTML = `${percent} %`;
+        document.getElementById('progressBar').style = `width: ${percent}%;`;
+
+
         let question = questions[currentQuestion];
         document.getElementById('actualQuestion').innerHTML = currentQuestion + 1;
         document.getElementById('questionText').innerHTML = question['question'];
@@ -128,4 +136,13 @@ function resetAnswerButtons() {
 function showCard() {
     document.getElementById('main-container').classList.remove('d-none');
     document.getElementById('welcome').classList.add('d-none');
+}
+
+function replayGame() {
+    document.getElementById('endScreen').style.display = "none";
+    document.getElementById('questionBody').style.display = "";
+    document.getElementById('mainCard').style.display = "";
+    rightQuestions = 0;
+    currentQuestion = 0;
+    init();
 }
