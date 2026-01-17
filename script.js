@@ -111,27 +111,27 @@ function answer(selection) {
     let selectedQuestionNumber = selection.slice(-1);
     let idOfRightAnswer = `answer_${question['right_answer']}`;
 
-    if (rightAnswerSelected(selectedQuestionNumber)) {
-        youWin();
+    if (rightAnswerSelected(selectedQuestionNumber, question)) {
+        youWin(idOfRightAnswer);
     } else {
-        youLose();
+        youLose(selection, idOfRightAnswer);
     }
     document.getElementById('nextButton').disabled = false;
 }
 
-function youWin() {
+function youWin(selection) {
     document.getElementById(selection).parentNode.classList.add('bg-success');
     AUDIO_SUCCESS.play();
     rightQuestions++;
 }
 
-function youLose() {
+function youLose(selection,idOfRightAnswer) {
     document.getElementById(selection).parentNode.classList.add('bg-danger');
     document.getElementById(idOfRightAnswer).parentNode.classList.add('bg-success');
     AUDIO_WRONG.play();
 }
 
-function rightAnswerSelected(selectedQuestionNumber) {
+function rightAnswerSelected(selectedQuestionNumber, question) {
     return selectedQuestionNumber == question['right_answer'];
 }
 
